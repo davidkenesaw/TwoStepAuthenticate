@@ -3,10 +3,12 @@ require('dotenv').config({
     path: path.resolve(__dirname, '../.env') 
 })
 const sgMail = require('@sendgrid/mail')
+
+//email api
 sgMail.setApiKey(process.env.EMAILKEY)
 
 
-
+//send an email
 function sendEmail(To, code){
     const msg = {
         to: To, 

@@ -11,7 +11,7 @@ const dbConn = mysql.createConnection({
   password : process.env.DBPASSWORD,
   database : process.env.DBDATABASE
 });
-//check if it gets connected
+//check if database gets connected
 dbConn.connect(function(err) {
   if (err) {
     console.log("Database did not connect");
