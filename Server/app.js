@@ -57,7 +57,7 @@ app.post('/CompleteLogin',function(req,res){//check to see if code is correct
         res.clearCookie("Email");
         res.cookie("loginID", "865843765",{signed:true});
         res.redirect("/Homepage");
-    }else{//nod correct
+    }else{//not correct
         const error = "code incorrect"; 
         res.render("CodePage",{error})
     }
