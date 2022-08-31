@@ -17,7 +17,7 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 app.use(cookieParser(process.env.SECRETE));//change this and make it secrete
-app.set('views', __dirname+"/views");
+app.set('views', path.join(__dirname, '../Client/views'));
 
 //get Pages
 app.get("/",function(req,res){//landing page
