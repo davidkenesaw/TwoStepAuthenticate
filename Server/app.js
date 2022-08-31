@@ -13,7 +13,9 @@ const {sendEmail} = require('../Config/email.config')
 const app = express();
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname + "public"));
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 app.use(cookieParser(process.env.SECRETE));//change this and make it secrete
 app.set('views', __dirname+"/views");
 
