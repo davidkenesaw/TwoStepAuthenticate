@@ -32,7 +32,7 @@ app.get("/RegisterPage",function(req,res){//register page
     res.render("Register",{error});
 });
 app.get('/CodePage',function(req,res){//enter in a code page
-    const randomNumber = Math.floor(Math.random() * 9999) + 1000
+    const randomNumber = Math.floor(Math.random() * 9000000000) + 1000000000;
     res.cookie('RegisterSecrete',randomNumber,{signed:true});
     sendEmail(req.signedCookies.Email,randomNumber)
     
