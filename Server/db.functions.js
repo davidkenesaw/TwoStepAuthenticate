@@ -1,3 +1,7 @@
+//000859536
+//David VanAsselberg
+//9/5/2022
+
 const dbConn = require('../Config/db.config');
 const {sendEmail} = require('../Config/email.config')
 
